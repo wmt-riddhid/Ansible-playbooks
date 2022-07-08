@@ -1,0 +1,27 @@
+---
+
+- name: sample book for running a web-page
+  hosts: 192.168.1.29
+  become: true
+  tasks:
+    - name: install php
+      apt:
+        name: php
+        state: latest
+
+    - name: restart php  
+      service: name=php state=restarted
+      #become: true
+      #become_method: sudo
+      #   with_items:
+      #   - rpcbind
+      #   - nginx-server
+      #   - nginx-lock
+      #   - nginx-idmap
+      # when: inventory_hostname == "storage"
+        
+
+    # - name: create content
+    #   copy:
+    #     content: "Congrulations on successfully installing ansible"
+    #     dest: /var/www/html/index.nginx-debian.html
