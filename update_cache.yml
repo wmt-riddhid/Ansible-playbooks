@@ -1,0 +1,9 @@
+---
+
+- hosts: 192.168.1.59
+  become: true
+  tasks:
+
+  - name: Update Cache
+    apt:
+      update-cache: yes
