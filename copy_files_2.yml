@@ -1,0 +1,11 @@
+# To copy a file
+
+---
+
+- name: To copy a file to a remote host
+  hosts: "*"
+  tasks:
+    - name: Copy files to remote host
+      copy: 
+        src: file/test-1.txt
+        dest: $HOME/test-1.txt
