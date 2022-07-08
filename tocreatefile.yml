@@ -1,7 +1,0 @@
----
-- hosts: 192.168.1.88
-  tasks:
-    - name: Creating an empty file
-      file:
-        path: "/home/lucifer/Desktop/riddhi/test-file.txt"
-        state: touch
